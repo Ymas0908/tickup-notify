@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TickiupNotifyApplication {
+public class TickupNotifyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(TickiupNotifyApplication.class, args);
+        SpringApplication.run(TickupNotifyApplication.class, args);
     }
 
 }
