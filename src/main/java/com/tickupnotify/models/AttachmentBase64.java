@@ -1,4 +1,4 @@
-package models;
+package com.tickupnotify.models;
 
 public class AttachmentBase64 {
     private String fileName;

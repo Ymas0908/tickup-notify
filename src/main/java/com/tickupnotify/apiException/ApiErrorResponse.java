@@ -1,7 +1,8 @@
-package apiException;
+package com.tickupnotify.apiException;
 
 import java.util.Map;
 
+@lombok.Data
 public class ApiErrorResponse {
     private String status;
     private String message;
@@ -15,39 +16,6 @@ public class ApiErrorResponse {
         this.status = status;
         this.message = message;
         this.code = code;
-        this.errors = errors;
-    }
-
-    // Getters and Setters
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public Map<String, String> getErrors() {
-        return errors;
-    }
-
-    public void setErrors(Map<String, String> errors) {
         this.errors = errors;
     }
 

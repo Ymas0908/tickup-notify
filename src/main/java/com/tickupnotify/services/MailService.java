@@ -1,7 +1,7 @@
-package services;
+package com.tickupnotify.services;
 
 
-import models.request.MailRequest;
+import com.tickupnotify.models.request.MailRequest;
 import org.springframework.stereotype.Service;
 
 @Service

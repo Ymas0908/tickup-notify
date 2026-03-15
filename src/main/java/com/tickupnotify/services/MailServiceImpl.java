@@ -1,6 +1,6 @@
-package services;
+package com.tickupnotify.services;
 
-import models.request.MailRequest;
+import com.tickupnotify.models.request.MailRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
@@ -37,11 +37,10 @@ public class MailServiceImpl implements MailService {
 
             helper.setFrom(senderMail);
             helper.setTo(mRequest.getRecipients());
-            helper.setSubject("Tickup - Inscription");
+            helper.setSubject(mRequest.getObject());
 
             // Charger le template HTML
-            String htmlContent = loadHtmlTemplate("mail.html/inscription-usager.html");
-            helper.setText(htmlContent, true); // true = HTML
+            helper.setText(mRequest.getContent(), true); // true = HTML
 
             javaMailSender.send(message);
             log.info("Mail envoyé avec succès à {}", Arrays.toString(mRequest.getRecipients()));

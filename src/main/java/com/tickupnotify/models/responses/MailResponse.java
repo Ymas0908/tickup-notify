@@ -1,4 +1,4 @@
-package models.responses;
+package com.tickupnotify.models.responses;
 
 
 import java.time.LocalDateTime;

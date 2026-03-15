@@ -1,6 +1,7 @@
-package models.request;
+package com.tickupnotify.models.request;
 
-import models.AttachmentBase64;
+import com.tickupnotify.models.AttachmentBase64;
+import io.swagger.v3.oas.annotations.media.Schema;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -9,8 +10,11 @@ import java.util.List;
 public class MailRequest {
 
     private String object;
+    
     private String content;
+    
     private String[] recipients;
+    
     private List<AttachmentBase64> attachments = new ArrayList<>();
 
     public MailRequest() {
